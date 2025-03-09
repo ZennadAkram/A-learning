@@ -13,7 +13,7 @@ class Studentdashboard extends ChangeNotifier{
   bool isloading=true;
 
   Future<void> Fetchcourses(Level level) async {
-    final url = Uri.parse("http://localhost:8080/api/course/student_courses/${level.toString().split('.').last}");
+    final url = Uri.parse("https://a-learning.onrender.com/api/course/student_courses/${level.toString().split('.').last}");
 
     try {
       final status = await http.get(
@@ -41,7 +41,7 @@ class Studentdashboard extends ChangeNotifier{
   }
 
   Future<void> Fetchassign() async{
-    final urla =Uri.parse("http://localhost:8080/api/pw/ITP");
+    final urla =Uri.parse("https://a-learning.onrender.com/api/pw/ITP");
 
     try{
       final status=await http.get(urla,

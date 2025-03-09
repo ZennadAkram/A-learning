@@ -8,7 +8,7 @@ class Teachercourseviewmodel extends ChangeNotifier{
 List<Course> _courses=[];
 List<Course> get courses=>_courses;
 Future<void> Fetchdata(int id)async {
-  Uri url=Uri.parse('http://localhost:8080/api/course/user/$id');
+  Uri url=Uri.parse('https://a-learning.onrender.com/api/course/user/$id');
  try{
    final response =await http.get(url,
    headers: {

@@ -22,7 +22,7 @@ class Teachersubvm extends ChangeNotifier{
 
   List<Course> courses=[];
   Future<void> Fetchdata(int id)async {
-    Uri url=Uri.parse('http://localhost:8080/api/course/user/$id');
+    Uri url=Uri.parse('https://a-learning.onrender.com/api/course/user/$id');
     try{
       final response =await http.get(url,
           headers: {
@@ -55,7 +55,7 @@ class Teachersubvm extends ChangeNotifier{
      notifyListeners();
    }
   Future<void> fetchSolution(int pwid) async {
-    Uri url = Uri.parse('http://localhost:8080/api/solution/all/$pwid');
+    Uri url = Uri.parse('https://a-learning.onrender.com/api/solution/all/$pwid');
 
     try {
       final response = await http.get(
@@ -108,7 +108,7 @@ class Teachersubvm extends ChangeNotifier{
 
 
   Future<void> Fetchassign(String courseid) async{
-    final urla =Uri.parse("http://localhost:8080/api/pw/$courseid");
+    final urla =Uri.parse("https://a-learning.onrender.com/api/pw/$courseid");
 
     try{
       final status=await http.get(urla,

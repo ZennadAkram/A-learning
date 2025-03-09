@@ -25,7 +25,7 @@ Future<void> changes(String id, int index) async {
 
   // Send the PUT request to the backend API
   final response = await http.put(
-    Uri.parse('http://localhost:8080/api/pw/update/$id'),
+    Uri.parse('https://a-learning.onrender.com/api/pw/update/$id'),
     headers: {'Content-Type': 'application/json'},
     body: json.encode(updatedPw),
 
@@ -42,7 +42,7 @@ Future<void> changes(String id, int index) async {
 
   bool isloading=true;
   Future<void> Removedata(int id,int index) async{
-    final url=Uri.parse("http://localhost:8080/api/pw/delete/$id");
+    final url=Uri.parse("https://a-learning.onrender.com/api/pw/delete/$id");
 
     try{
       final response=await http.delete(url);
@@ -60,7 +60,7 @@ Future<void> changes(String id, int index) async {
     }
   }
 Future<void> Fetchassign(String courseid) async{
-  final urla =Uri.parse("http://localhost:8080/api/pw/$courseid");
+  final urla =Uri.parse("https://a-learning.onrender.com/api/pw/$courseid");
 
   try{
     final status=await http.get(urla,

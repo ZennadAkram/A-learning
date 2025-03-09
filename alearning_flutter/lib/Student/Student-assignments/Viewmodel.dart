@@ -8,7 +8,7 @@ class Studentassign extends ChangeNotifier{
   bool isloadingass=true;
 
   Future<void> Fetchassign(String courseid) async{
-    final urla =Uri.parse("http://localhost:8080/api/pw/$courseid");
+    final urla =Uri.parse("https://a-learning.onrender.com/api/pw/$courseid");
 
     try{
       final status=await http.get(urla,

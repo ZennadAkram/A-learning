@@ -129,7 +129,7 @@ class Details extends ChangeNotifier{
  }
 
  Future<String> uploadFileToBackendWeb(PlatformFile file) async {
-  String apiUrl = "http://localhost:8080/api/files/upload"; // Backend API URL
+  String apiUrl = "https://a-learning.onrender.com/api/files/upload"; // Backend API URL
 
   // On web, use the byte data available in the `file.bytes`
   if (file.bytes != null) {
@@ -232,7 +232,7 @@ class Details extends ChangeNotifier{
   print('Sending JSON: $jsonBody');
 
   // Send the HTTP POST request
-  final url = Uri.parse('http://localhost:8080/api/solution/add');
+  final url = Uri.parse('https://a-learning.onrender.com/api/solution/add');
   final response = await http.post(
    url,
    headers: {'Content-Type': 'application/json'},
@@ -253,7 +253,7 @@ class Details extends ChangeNotifier{
   print('Fetching feedback for pwid: $pwid, iduser: $iduser');
 
   final url = Uri.parse(
-      'http://localhost:8080/api/feedback/get-by-pw-user/$pwid/$iduser'); // Replace with your IP
+      'https://a-learning.onrender.com/api/feedback/get-by-pw-user/$pwid/$iduser'); // Replace with your IP
 
   print('Constructed URL: $url');
 

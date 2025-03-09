@@ -11,7 +11,7 @@ class Techerfeedmv extends ChangeNotifier{
     notifyListeners();
   }
   Future<void> updateFeedback(int idSolution, Feedbacka feedback) async {
-    final url = Uri.parse('http://localhost:8080/api/solution/update-feedback/$idSolution');
+    final url = Uri.parse('https://a-learning.onrender.com/api/solution/update-feedback/$idSolution');
 
 
     final body = json.encode(feedback.toJson());

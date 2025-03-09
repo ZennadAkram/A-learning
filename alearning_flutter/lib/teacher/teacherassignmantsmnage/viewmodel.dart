@@ -29,7 +29,7 @@ void updateField3(String value) {
   notifyListeners();
 }
  Future<String> uploadFileToBackendWeb(PlatformFile file) async {
-   String apiUrl = "http://localhost:8080/api/files/upload"; // Backend API URL
+   String apiUrl = "https://a-learning.onrender.com/api/files/upload"; // Backend API URL
 
    // On web, use the byte data available in the `file.bytes`
    if (file.bytes != null) {
@@ -125,7 +125,7 @@ Future<List<PlatformFile>?> pickfile() async {
 
 
   // URL to send the POST request to
-    final url = Uri.parse('http://localhost:8080/api/pw/add');
+    final url = Uri.parse('https://a-learning.onrender.com/api/pw/add');
 
     // Convert the assignment object to JSON
     final body = jsonEncode(s1?.toJson());

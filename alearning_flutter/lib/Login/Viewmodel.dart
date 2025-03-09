@@ -51,7 +51,7 @@ class Loginmanager extends ChangeNotifier {
   }
 
   Future<void> loginUser(String email, String password) async {
-    final url = Uri.parse('http://localhost:8080/api/user/login');
+    final url = Uri.parse('https://a-learning.onrender.com/api/user/login');
 
     try {
       final response = await http.post(

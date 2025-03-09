@@ -114,7 +114,7 @@ bool teacher=false;
   }
 
   Future<void> Studentnum() async {
-    final url = Uri.parse('http://localhost:8080/api/user/studentnumber');
+    final url = Uri.parse('https://a-learning.onrender.com/api/user/studentnumber');
     try {
       final status = await http.get(url, headers: {'Accept': 'application/json'});
 
@@ -137,7 +137,7 @@ bool teacher=false;
 
 
   Future<void> feed() async {
-    final url = Uri.parse('http://localhost:8080/api/feedback/count');
+    final url = Uri.parse('https://a-learning.onrender.com/api/feedback/count');
     try {
       final status = await http.get(url, headers: {'Accept': 'application/json'});
 
@@ -159,7 +159,7 @@ bool teacher=false;
   }
 
   Future<void> subm() async {
-    final url = Uri.parse('http://localhost:8080/api/solution/submission/count');
+    final url = Uri.parse('https://a-learning.onrender.com/api/solution/submission/count');
     try {
       final status = await http.get(url, headers: {'Accept': 'application/json'});
 
@@ -181,7 +181,7 @@ bool teacher=false;
   }
 
   Future<void> Fetchuser() async {
-    final url = Uri.parse('http://localhost:8080/api/user/all');
+    final url = Uri.parse('https://a-learning.onrender.com/api/user/all');
     try {
       final status = await http.get(url, headers: {'Accept': 'application/json'});
 
@@ -206,7 +206,7 @@ bool teacher=false;
 
 
   Future<void> delete(int i, int id) async {
-    final url = Uri.parse('http://localhost:8080/api/user/delete/$id'); // Correct URL format
+    final url = Uri.parse('https://a-learning.onrender.com/api/user/delete/$id'); // Correct URL format
     try {
       final response = await http.delete(
         url,
@@ -251,7 +251,7 @@ bool teacher=false;
   }
 
   Future<void> addUser() async {
-    final url = Uri.parse('http://localhost:8080/api/user/add');
+    final url = Uri.parse('https://a-learning.onrender.com/api/user/add');
 
     try {
       final status = await http.post(
